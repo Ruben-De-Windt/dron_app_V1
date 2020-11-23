@@ -6,12 +6,15 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/homeBtnPagina1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="return"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="667dp" />
+        android:layout_marginBottom="16dp"
+        android:text="startscreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -81,8 +84,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="75°C"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/homeBtnPagina1"
+        app:layout_constraintStart_toStartOf="@+id/homeBtnPagina1"
         tools:layout_editor_absoluteY="534dp" />
 
     <TextView
