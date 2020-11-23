@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -60,13 +62,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button brankoBtn = (Button) findViewById (R.id.btnPagina1);
+        Button rubenBtn = (Button) findViewById (R.id.btnPagina2);
+        brankoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent brankoSwitch = new Intent(getApplicationContext(), Pagina1.class);
+                startActivity(brankoSwitch);
+            }
+        });
+        rubenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent rubenswitch = new Intent(getApplicationContext(), Pagina2.class);
+                startActivity(rubenswitch);
+            }
+        });
 
         // When the compile and target version is higher than 22, please request the following permission at runtime to ensure the SDK works well.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkAndRequestPermissions();
         }
-
-        setContentView(R.layout.activity_main);
 
         //Initialize DJI SDK Manager
         mHandler = new Handler(Looper.getMainLooper());

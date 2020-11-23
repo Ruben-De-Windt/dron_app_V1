@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dji.importSDKDemo">
-
     <!-- Permissions and features -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -28,8 +27,6 @@
         android:name="android.hardware.usb.accessory"
         android:required="true" />
 
-    <!-- Permissions and features -->
-
     <application
         android:name=".MApplication"
         android:allowBackup="true"
@@ -37,29 +34,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-
-        <!-- DJI SDK -->
+        android:theme="@style/AppTheme">
+        <activity android:name=".Pagina2"></activity>
+        <activity android:name=".Pagina1" /> <!-- DJI SDK -->
         <uses-library android:name="com.android.future.usb.accessory" />
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="783d7b732b742727425553ac" />
-
-        <!-- DJI SDK -->
-
-        <activity android:name=".MainActivity"
-                  android:configChanges="orientation"
-                  android:screenOrientation="portrait">
+            android:value="783d7b732b742727425553ac" /> <!-- DJI SDK -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
             </intent-filter>
+
             <meta-data
                 android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
                 android:resource="@xml/accessory_filter" />

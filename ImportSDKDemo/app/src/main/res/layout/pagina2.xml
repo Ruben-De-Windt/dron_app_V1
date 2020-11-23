@@ -10,18 +10,18 @@
         android:layout_width="405dp"
         android:layout_height="0dp"
         android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
+        app:layout_constraintEnd_toEndOf="@+id/homeBtnPagina2"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/homeBtnPagina2"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/homeBtnPagina2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="37dp"
-        android:text="return"
+        android:text="startscreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
