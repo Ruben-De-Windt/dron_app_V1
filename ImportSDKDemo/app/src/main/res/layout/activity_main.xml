@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0AEDBE1"
     tools:context="com.dji.importSDKDemo.MainActivity">
 
-    <Button
-        android:id="@+id/btnPagina1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:text="code branko"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="157dp"
+        android:layout_height="98dp"
+        app:srcCompat="@drawable/logo_vives"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="617dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="137dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/dji_innovations_logo_svg"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="597dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="153dp"
+        android:layout_height="106dp"
+        app:srcCompat="@drawable/tekengebied_1"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="57dp" />
 
     <Button
         android:id="@+id/btnPagina2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="code Ruben"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPagina1"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <Button
+        android:id="@+id/btnPagina1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="code branko"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="373dp"
+        android:layout_height="262dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=" Exploring the possibilities of DJI's SDK's"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="498dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

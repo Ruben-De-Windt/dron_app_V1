@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ImportSDKDemo</string>
+    <string name="def_temp">75°C</string>
+    <string name="def_height">30,1 m</string>
+    <string name="def_bat">75%</string>
+    <string name="def_angle">135,7°</string>
+    <string name="battery">Battery</string>
+    <string name="temperature">temperature</string>
+    <string name="height">Height</string>
+    <string name="compas">Compas</string>
+    <string name="startscreen">startscreen</string>
+    <string name="def_ma">100 mA</string>
+    <string name="def_mv">100 mV</string>
+    <string name="drone_cd">drone coord.</string>
+    <string name="home_cd">home coord.</string>
+    <string name="set_home">set Home</string>
 </resources>
