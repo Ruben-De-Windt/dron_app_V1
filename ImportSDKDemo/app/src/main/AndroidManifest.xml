@@ -35,7 +35,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pagina2"></activity>
+        <activity android:name=".Pagina2" />
         <activity android:name=".Pagina1" /> <!-- DJI SDK -->
         <uses-library android:name="com.android.future.usb.accessory" />
         <uses-library

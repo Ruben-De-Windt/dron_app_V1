@@ -5,16 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="405dp"
-        android:layout_height="285dp"
-        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
     <Button
         android:id="@+id/homeBtnPagina2"
         android:layout_width="wrap_content"
@@ -22,40 +12,127 @@
         android:text="startscreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:text="drone coord."
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         android:text="home coord."
-        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintBottom_toTopOf="@+id/timer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
         android:id="@+id/button4"
         android:layout_width="106dp"
         android:layout_height="41dp"
+        android:layout_marginTop="16dp"
         android:text="set Home"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="413dp"
+        android:layout_height="218dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeBtnPagina2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="133dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="Capture"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_shoot_photo_mode"
+        app:layout_constraintTop_toBottomOf="@+id/btn_record"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <ToggleButton
+        android:id="@+id/btn_record"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="552dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="Start Record"
+        android:textOff="Start Record"
+        android:textOn="Stop Record"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_record_video_mode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_shoot_photo_mode"
+        android:layout_width="157dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="60dp"
+        android:layout_weight="1"
+        android:text="Shoot Photo Mode"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_record_video_mode" />
+
+    <Button
+        android:id="@+id/btn_record_video_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="552dp"
+        android:layout_marginEnd="52dp"
+        android:layout_weight="1"
+        android:text="Record Video Mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/video_previewer_surface"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.414" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
