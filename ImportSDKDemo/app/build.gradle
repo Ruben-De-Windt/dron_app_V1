@@ -79,7 +79,14 @@ dependencies {
         compile ('com.dji:dji-uilibrary:4.4.1')
         provided ('com.dji:dji-sdk-provided:4.4.1')
     })
+<<<<<<< HEAD
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    compileOnly 'com.dji:dji-sdk-provided:4.11'
+=======
     compileOnly 'com.dji:dji-sdk-provided:4.13.1'
+>>>>>>> 64f2c1a0d8e1b3d9b73e95e14c68de93cf57a60b
 
     androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
