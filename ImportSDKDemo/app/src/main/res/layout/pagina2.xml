@@ -9,7 +9,7 @@
         android:id="@+id/homeBtnPagina2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="startscreen"
+        android:text="@string/startscreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -19,8 +19,12 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginBottom="36dp"
         android:text="drone coord."
+=======
+        android:text="@string/drone_cd"
+>>>>>>> 64f2c1a0d8e1b3d9b73e95e14c68de93cf57a60b
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -30,9 +34,14 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginBottom="52dp"
         android:text="home coord."
         app:layout_constraintBottom_toTopOf="@+id/timer"
+=======
+        android:text="@string/home_cd"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+>>>>>>> 64f2c1a0d8e1b3d9b73e95e14c68de93cf57a60b
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -41,8 +50,12 @@
         android:id="@+id/button4"
         android:layout_width="106dp"
         android:layout_height="41dp"
+<<<<<<< HEAD
         android:layout_marginTop="16dp"
         android:text="set Home"
+=======
+        android:text="@string/set_home"
+>>>>>>> 64f2c1a0d8e1b3d9b73e95e14c68de93cf57a60b
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

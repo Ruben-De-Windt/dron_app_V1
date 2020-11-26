@@ -1,8 +1,25 @@
 <resources>
     <string name="app_name">ImportSDKDemo</string>
+<<<<<<< HEAD
     <string name="action_settings">Settings</string>
     <string name="disconnected">Disconnected</string>
     <string name="product_information">Product Information</string>
     <string name="connection_loose">Status: No Product Connected</string>
     <string name="sdk_version">DJI SDK Version: %1$s</string>
+=======
+    <string name="def_temp">75°C</string>
+    <string name="def_height">30,1 m</string>
+    <string name="def_bat">75%</string>
+    <string name="def_angle">135,7°</string>
+    <string name="battery">Battery</string>
+    <string name="temperature">temperature</string>
+    <string name="height">Height</string>
+    <string name="compas">Compas</string>
+    <string name="startscreen">startscreen</string>
+    <string name="def_ma">100 mA</string>
+    <string name="def_mv">100 mV</string>
+    <string name="drone_cd">drone coord.</string>
+    <string name="home_cd">home coord.</string>
+    <string name="set_home">set Home</string>
+>>>>>>> 64f2c1a0d8e1b3d9b73e95e14c68de93cf57a60b
 </resources>
