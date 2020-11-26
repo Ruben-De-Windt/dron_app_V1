@@ -11,41 +11,55 @@
         android:id="@+id/imageView"
         android:layout_width="157dp"
         android:layout_height="98dp"
-        app:srcCompat="@drawable/logo_vives"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="617dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.714"
+        app:srcCompat="@drawable/logo_vives" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="137dp"
         android:layout_height="119dp"
-        app:srcCompat="@drawable/dji_innovations_logo_svg"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="597dp" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.738"
+        app:srcCompat="@drawable/dji_innovations_logo_svg" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="153dp"
         android:layout_height="106dp"
-        app:srcCompat="@drawable/tekengebied_1"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tekengebied_1" />
 
     <Button
         android:id="@+id/btnPagina2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:text="code Ruben"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnPagina1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="code branko"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="124dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPagina2" />
 
     <TextView
         android:id="@+id/textView5"
@@ -55,15 +69,21 @@
         android:text=" Exploring the possibilities of DJI's SDK's"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="498dp" />
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

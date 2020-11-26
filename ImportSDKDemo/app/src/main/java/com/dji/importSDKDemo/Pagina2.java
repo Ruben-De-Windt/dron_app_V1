@@ -1,6 +1,7 @@
 package com.dji.importSDKDemo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.os.Handler;
@@ -47,6 +48,14 @@ public class Pagina2 extends Activity implements TextureView.SurfaceTextureListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina2);
 
+        Button homeBtnpagina2 = (Button) findViewById (R.id.homeBtnPagina2);
+        homeBtnpagina2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homeSwitchpagina2 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(homeSwitchpagina2);
+            }
+        });
         handler = new Handler();
 
 
