@@ -29,7 +29,7 @@ import dji.sdk.useraccount.UserAccountManager;
 
 public class Pagina2 extends Activity implements TextureView.SurfaceTextureListener, View.OnClickListener {
 
-    private static final String TAG = MainActivity.class.getName();
+    private static final String TAG = Pagina2.class.getName();
     protected VideoFeeder.VideoDataListener mReceivedVideoDataListener = null;
 
     // Codec for video live view
@@ -48,6 +48,8 @@ public class Pagina2 extends Activity implements TextureView.SurfaceTextureListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina2);
 
+
+
         Button homeBtnpagina2 = (Button) findViewById (R.id.homeBtnPagina2);
         homeBtnpagina2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class Pagina2 extends Activity implements TextureView.SurfaceTextureListe
             }
         });
         handler = new Handler();
-
+        initUI();
 
 
         // The callback for receiving the raw H264 video data for camera live view
