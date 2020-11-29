@@ -33,9 +33,25 @@ public class Pagina1 extends AppCompatActivity {
                 startActivity(homeSwitchpagina1);
             }
         });
+
+        Button getHeading = (Button) findViewById (R.id.btnHeading);
+        getHeading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GetHeading();
+            }
+        });
+
+        Button getBattery = (Button) findViewById (R.id.btnBattery);
+        getBattery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GetBatteryInfo();
+            }
+        });
     }
 
-    private void GetHeading(View v)
+    private void GetHeading()
     {
         TextView infoHeading = findViewById(R.id.txtHeading);
         infoHeading.setText("");
@@ -51,7 +67,7 @@ public class Pagina1 extends AppCompatActivity {
 
     }
 
-    private void GetBatteryInfo(View v)
+    private void GetBatteryInfo()
     {
         TextView infoProcent = findViewById(R.id.txtBatteryProcent);
         TextView infoCurrent = findViewById(R.id.txtBatteryCurrent);
@@ -72,5 +88,11 @@ public class Pagina1 extends AppCompatActivity {
                 infoVoltage.setText(batteryInfoVoltage);
             }
         });
+    }
+
+    public void GetHeading(View view) {
+    }
+
+    public void GetBatteryInfo(View view) {
     }
 }

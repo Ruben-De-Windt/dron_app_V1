@@ -140,9 +140,14 @@
         android:layout_height="wrap_content"
         android:onClick="GetBatteryInfo"
         android:text="Get Battery Info"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
+=======
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="304dp" />
+>>>>>>> a68eed4a6dd4d8318f68ad4e197f6d2d88823e25
 
 </androidx.constraintlayout.widget.ConstraintLayout>
