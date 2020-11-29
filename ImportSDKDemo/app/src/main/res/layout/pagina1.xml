@@ -138,7 +138,7 @@
         android:layout_height="wrap_content"
         android:onClick="GetBatteryInfo"
         android:text="Get Battery Info"
-        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="304dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
