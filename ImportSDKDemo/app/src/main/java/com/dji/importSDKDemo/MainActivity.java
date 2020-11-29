@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, String.format("onProductConnect newProduct:%s", baseProduct));
                             showToast("Product Connected" + baseProduct.getModel() + compass.getHeading());
                             notifyStatusChange();
+                            mProduct = baseProduct; //Koppelin maken naar globale variable
 
                         }
 
