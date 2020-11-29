@@ -5,4 +5,15 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBG">#ff3300</color>
     <color name="colorFG">#0055ff</color>
+
+    <color name="title_dark">#212121</color>
+    <color name="white">#FFFFFF</color>
+    <color name="button_normal">#50808080</color>
+    <color name="button_press">#5086BFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="gs_home_stroke">#b200ae39</color>
+    <color name="gs_home_fill">#0d1eff00</color>
+    <color name="auth_fill">#28FFFF00</color>
+    <color name="limit_fill">#78FF0000</color>
 </resources>

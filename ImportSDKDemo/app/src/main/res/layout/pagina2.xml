@@ -15,35 +15,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/coords"
-        android:layout_width="295dp"
-        android:layout_height="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="173dp" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="283dp"
-        android:layout_height="27dp"
-        app:layout_constraintBottom_toTopOf="@+id/timer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coords" />
-
     <Button
-        android:id="@+id/navcor"
+        android:id="@+id/navMap"
         android:layout_width="106dp"
         android:layout_height="41dp"
+        android:layout_marginTop="200dp"
         android:text="navcor"
-        app:layout_constraintBottom_toTopOf="@+id/coords"
+        app:layout_constraintBottom_toTopOf="@+id/timer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextureView
         android:id="@+id/video_previewer_surface"
