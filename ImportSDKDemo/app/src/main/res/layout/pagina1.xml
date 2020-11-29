@@ -129,8 +129,10 @@
         android:layout_height="wrap_content"
         android:onClick="GetHeading"
         android:text="Get Heading"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="120dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
 
     <Button
         android:id="@+id/btnBattery"
@@ -138,7 +140,9 @@
         android:layout_height="wrap_content"
         android:onClick="GetBatteryInfo"
         android:text="Get Battery Info"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="304dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
