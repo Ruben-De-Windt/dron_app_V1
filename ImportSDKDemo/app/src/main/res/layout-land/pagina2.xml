@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#035F6C">
+
+    <TextView
+        android:id="@+id/coords"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="179dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coords"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/navcor"
+        android:layout_width="106dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:text="navcor"
+        app:layout_constraintBottom_toTopOf="@+id/btn_shoot_photo_mode"
+        app:layout_constraintStart_toStartOf="@+id/btn_shoot_photo_mode"
+        app:layout_constraintTop_toBottomOf="@+id/coords" />
+
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="412dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="115dp"
+        android:background="#87ECD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coords" />
+
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="461dp"
+        android:layout_marginBottom="164dp"
+        android:layout_weight="1"
+        android:text="Capture"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_record_video_mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_shoot_photo_mode" />
+
+    <ToggleButton
+        android:id="@+id/btn_record"
+        android:layout_width="106dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="Start Record"
+        android:textOff="Start Record"
+        android:textOn="Stop Record"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/navcor" />
+
+    <Button
+        android:id="@+id/btn_record_video_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="Record Video Mode"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_capture" />
+
+    <Button
+        android:id="@+id/homeBtnPagina2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/startscreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_shoot_photo_mode"
+        android:layout_width="147dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:text="Shoot Photo Mode"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_capture"
+        app:layout_constraintStart_toStartOf="@+id/btn_capture"
+        app:layout_constraintTop_toBottomOf="@+id/navcor" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/video_previewer_surface"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/coords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="522dp"
+        android:layout_marginBottom="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coords"
+        app:srcCompat="@drawable/pic_highlight" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:srcCompat="@drawable/video_highlight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
