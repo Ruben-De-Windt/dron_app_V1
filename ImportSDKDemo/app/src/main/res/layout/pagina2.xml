@@ -15,6 +15,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_shoot_photo_mode"
         tools:layout_editor_absoluteX="150dp" />
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/coords"
         android:layout_width="295dp"
@@ -31,14 +32,25 @@
         app:layout_constraintTop_toBottomOf="@+id/coords"
         tools:layout_editor_absoluteX="76dp" />
 
+=======
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
     <Button
-        android:id="@+id/navcor"
+        android:id="@+id/navMap"
         android:layout_width="106dp"
         android:layout_height="41dp"
+        android:layout_marginTop="200dp"
         android:text="navcor"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@+id/coords"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="156dp" />
+=======
+        app:layout_constraintBottom_toTopOf="@+id/timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextureView
         android:id="@+id/video_previewer_surface"

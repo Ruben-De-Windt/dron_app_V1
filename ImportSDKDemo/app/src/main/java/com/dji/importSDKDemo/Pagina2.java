@@ -49,13 +49,21 @@ public class Pagina2 extends Activity implements TextureView.SurfaceTextureListe
         setContentView(R.layout.pagina2);
 
 
-
+        Button MapPagina = (Button) findViewById(R.id.navMap);
         Button homeBtnpagina2 = (Button) findViewById (R.id.homeBtnPagina2);
         homeBtnpagina2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent homeSwitchpagina2 = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(homeSwitchpagina2);
+            }
+        });
+
+        MapPagina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent MapPagina = new Intent(getApplicationContext(), GoogleMa.class);
+                startActivity(MapPagina);
             }
         });
         handler = new Handler();

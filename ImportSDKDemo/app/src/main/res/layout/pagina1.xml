@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#035F6C">
+=======
+    tools:ignore="ExtraText">
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextView
         android:id="@+id/textView20"
@@ -19,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txtHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="182dp"
@@ -35,13 +39,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/height"
+<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView19"
         app:layout_constraintTop_toTopOf="@+id/imageView12" />
+=======
+        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina1"
+        app:layout_constraintStart_toStartOf="@+id/txtBatteryVoltage"
+        app:layout_constraintTop_toTopOf="@+id/txtHeading" />
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/txtBatteryProcent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="9dp"
@@ -64,14 +74,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/txtBatteryVoltage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="100 mV"
+<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
+=======
+        app:layout_constraintStart_toStartOf="@+id/txtBatteryCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextView
         android:id="@+id/textView2"
@@ -80,10 +95,15 @@
         android:layout_marginStart="1dp"
         android:layout_marginBottom="19dp"
         android:text="@string/battery"
+<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintStart_toStartOf="@+id/textView22" />
+=======
+        app:layout_constraintBottom_toTopOf="@+id/txtBatteryCurrent"
+        app:layout_constraintStart_toStartOf="@+id/txtBatteryCurrent" />
+>>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextView
         android:id="@+id/textView"
@@ -98,7 +118,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/txtBatteryCurrent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="246dp"
@@ -185,5 +205,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView18"
         app:srcCompat="@drawable/leftmenu_dlg_landing" />
+
+    <Button
+        android:id="@+id/btnHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="GetHeading"
+        android:text="Get Heading"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+
+    <Button
+        android:id="@+id/btnBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="GetBatteryInfo"
+        android:text="Get Battery Info"
+
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="304dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

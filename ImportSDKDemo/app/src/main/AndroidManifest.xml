@@ -36,7 +36,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Pagina2" />
-        <activity android:name=".Pagina1" /> <!-- DJI SDK -->
+        <activity android:name=".Pagina1" />
+        <activity android:name=".GoogleMa" /><!-- DJI SDK -->
         <uses-library android:name="com.android.future.usb.accessory" />
         <uses-library
             android:name="org.apache.http.legacy"
@@ -44,7 +45,15 @@
 
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="783d7b732b742727425553ac" /> <!-- DJI SDK -->
+            android:value="783d7b732b742727425553ac" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAG5dLDnPHjaBuT-E5MBbO8t4zIKlfpZso" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- DJI SDK -->
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
