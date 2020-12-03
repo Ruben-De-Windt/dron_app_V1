@@ -17,7 +17,7 @@ import dji.sdk.products.Aircraft;
 import dji.sdk.sdkmanager.DJISDKInitEvent;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.common.battery.BatteryState;
-
+import dji.common.flightcontroller.FlightControllerState;
 import dji.sdk.flightcontroller.LandingGear;
 
 
@@ -55,6 +55,14 @@ public class Pagina1 extends AppCompatActivity {
             }
         });
 
+        Button getHeight = (Button) findViewById (R.id.btnHeight);
+        getBattery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GetHeight();
+            }
+        });
+
     }
 
     private void GetHeading()
@@ -65,7 +73,7 @@ public class Pagina1 extends AppCompatActivity {
         Aircraft aircraft = (Aircraft) mProduct;
         FlightController flightController = aircraft.getFlightController();
         //showToast("Heading: "+ flightController.getCompass().getHeading());
-        String text = "Heading: " + flightController.getCompass().getHeading();
+        String text = flightController.getCompass().getHeading()+"°";
         //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
         //toast.show();
         infoHeading.setText(text);
@@ -85,9 +93,9 @@ public class Pagina1 extends AppCompatActivity {
         mProduct.getBattery().setStateCallback(new BatteryState.Callback() {
             @Override
             public void onUpdate(BatteryState djiBatteryState) {
-                String batteryInfoProcent = "BatteryEnergyRemainingPercent: " + djiBatteryState.getChargeRemainingInPercent()+"%";
-                String batteryInfoCurrent =  "CurrentCurrent: : "+djiBatteryState.getCurrent()+"mA";
-                String batteryInfoVoltage = "CurrentVoltage: : "+djiBatteryState.getVoltage()+"mV";
+                String batteryInfoProcent = djiBatteryState.getChargeRemainingInPercent()+"%";
+                String batteryInfoCurrent =  djiBatteryState.getCurrent()+"mA";
+                String batteryInfoVoltage = djiBatteryState.getVoltage()+"mV";
 
                 infoProcent.setText(batteryInfoProcent);
                 infoCurrent.setText(batteryInfoCurrent);
@@ -97,16 +105,16 @@ public class Pagina1 extends AppCompatActivity {
     }
     private void GetHeight()
     {
-        TextView infoHeading = findViewById(R.id.txtHeading);
-        infoHeading.setText("");
+        TextView infoHeight = findViewById(R.id.txtHeight);
+        infoHeight.setText("");
 
         Aircraft aircraft = (Aircraft) mProduct;
-        FlightController flightController = aircraft.getFlightController();
+        FlightControllerState flightControllerState = aircraft.getFlightController().getState();
         //showToast("Heading: "+ flightController.getCompass().getHeading());
-        String text = "Heading: " + flightController;
+        String text = flightControllerState.getAttitude()+"m.";
         //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
         //toast.show();
-        infoHeading.setText(text);
+        infoHeight.setText(text);
 
 
     }
