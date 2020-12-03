@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dji.common.flightcontroller.LocationCoordinate3D;
 import dji.common.flightcontroller.FlightControllerState;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
@@ -17,7 +18,7 @@ import dji.sdk.products.Aircraft;
 import dji.sdk.sdkmanager.DJISDKInitEvent;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.common.battery.BatteryState;
-import dji.common.flightcontroller.FlightControllerState;
+
 import dji.sdk.flightcontroller.LandingGear;
 
 
@@ -56,7 +57,7 @@ public class Pagina1 extends AppCompatActivity {
         });
 
         Button getHeight = (Button) findViewById (R.id.btnHeight);
-        getBattery.setOnClickListener(new View.OnClickListener() {
+        getHeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 GetHeight();
@@ -109,9 +110,11 @@ public class Pagina1 extends AppCompatActivity {
         infoHeight.setText("");
 
         Aircraft aircraft = (Aircraft) mProduct;
-        FlightControllerState flightControllerState = aircraft.getFlightController().getState();
+        FlightController flightController = aircraft.getFlightController();
+        FlightControllerState flightControllerState = flightController.getState();
+        LocationCoordinate3D locationCoordinate3D = flightControllerState.getAircraftLocation();
         //showToast("Heading: "+ flightController.getCompass().getHeading());
-        String text = flightControllerState.getAttitude()+"m.";
+        String text = locationCoordinate3D.getAltitude()+"m.";
         //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
         //toast.show();
         infoHeight.setText(text);
