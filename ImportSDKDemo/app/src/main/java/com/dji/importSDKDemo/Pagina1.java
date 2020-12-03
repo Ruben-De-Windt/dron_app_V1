@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dji.common.flightcontroller.FlightControllerState;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.flightcontroller.FlightController;
@@ -17,13 +18,17 @@ import dji.sdk.sdkmanager.DJISDKInitEvent;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.common.battery.BatteryState;
 
+import dji.sdk.flightcontroller.LandingGear;
+
+
 public class Pagina1 extends AppCompatActivity {
-    private static BaseProduct mProduct;
+    BaseProduct mProduct = CAM.getProductInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina1);
+
 
         Button homeBtnpagina1 = (Button) findViewById (R.id.homeBtnPagina1);
         homeBtnpagina1.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +54,7 @@ public class Pagina1 extends AppCompatActivity {
                 GetBatteryInfo();
             }
         });
+
     }
 
     private void GetHeading()
@@ -89,10 +95,20 @@ public class Pagina1 extends AppCompatActivity {
             }
         });
     }
+    private void GetHeight()
+    {
+        TextView infoHeading = findViewById(R.id.txtHeading);
+        infoHeading.setText("");
 
-    public void GetHeading(View view) {
+        Aircraft aircraft = (Aircraft) mProduct;
+        FlightController flightController = aircraft.getFlightController();
+        //showToast("Heading: "+ flightController.getCompass().getHeading());
+        String text = "Heading: " + flightController;
+        //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
+        //toast.show();
+        infoHeading.setText(text);
+
+
     }
 
-    public void GetBatteryInfo(View view) {
-    }
 }
