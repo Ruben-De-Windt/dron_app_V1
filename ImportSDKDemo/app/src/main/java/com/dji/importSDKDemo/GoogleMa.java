@@ -86,7 +86,7 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
 
     private MarkerOptions markerOptions = new MarkerOptions();
     private LatLng latLng;
-    private double droneLocationLat = 181, droneLocationLng = 181;
+    private double droneLocationLat = 50.805638, droneLocationLng = 3.282862;
     private ArrayList<CustomUnlockZone> customUnlockZones;
     private ArrayList<Integer> flyZoneIdsToUnlock = new ArrayList<Integer>();
     private kluerenVlieg painter = new kluerenVlieg();
