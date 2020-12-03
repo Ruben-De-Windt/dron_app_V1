@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#035F6C">
 
     <Button
         android:id="@+id/homeBtnPagina2"
@@ -11,27 +12,24 @@
         android:layout_height="wrap_content"
         android:text="@string/startscreen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_shoot_photo_mode"
+        tools:layout_editor_absoluteX="150dp" />
 
     <TextView
         android:id="@+id/coords"
         android:layout_width="295dp"
         android:layout_height="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="173dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/navcor"
+        tools:layout_editor_absoluteX="71dp" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="283dp"
         android:layout_height="27dp"
         app:layout_constraintBottom_toTopOf="@+id/timer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coords" />
+        app:layout_constraintTop_toBottomOf="@+id/coords"
+        tools:layout_editor_absoluteX="76dp" />
 
     <Button
         android:id="@+id/navcor"
@@ -39,22 +37,20 @@
         android:layout_height="41dp"
         android:text="navcor"
         app:layout_constraintBottom_toTopOf="@+id/coords"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        tools:layout_editor_absoluteX="156dp" />
 
     <TextureView
         android:id="@+id/video_previewer_surface"
-        android:layout_width="413dp"
-        android:layout_height="218dp"
+        android:layout_width="428dp"
+        android:layout_height="236dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="204dp"
-        app:layout_constraintBottom_toBottomOf="@+id/homeBtnPagina2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_record"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <Button
         android:id="@+id/btn_capture"
@@ -64,17 +60,15 @@
         android:layout_weight="1"
         android:text="Capture"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_shoot_photo_mode"
+        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
         app:layout_constraintTop_toBottomOf="@+id/btn_record"
-        app:layout_constraintVertical_bias="0.302" />
+        tools:layout_editor_absoluteX="61dp" />
 
     <ToggleButton
         android:id="@+id/btn_record"
-        android:layout_width="127dp"
-        android:layout_height="45dp"
+        android:layout_width="106dp"
+        android:layout_height="69dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="552dp"
         android:layout_weight="1"
         android:checked="false"
         android:text="Start Record"
@@ -82,34 +76,33 @@
         android:textOn="Stop Record"
         android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_record_video_mode"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="552dp" />
 
     <Button
         android:id="@+id/btn_shoot_photo_mode"
         android:layout_width="157dp"
         android:layout_height="49dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginEnd="60dp"
         android:layout_weight="1"
         android:text="Shoot Photo Mode"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_record_video_mode" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_record_video_mode"
+        tools:layout_editor_absoluteX="202dp" />
 
     <Button
         android:id="@+id/btn_record_video_mode"
-        android:layout_width="0dp"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="552dp"
-        android:layout_marginEnd="52dp"
         android:layout_weight="1"
         android:text="Record Video Mode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_record"
+        tools:layout_editor_absoluteY="552dp" />
 
     <TextView
         android:id="@+id/timer"
@@ -122,7 +115,7 @@
         android:gravity="center"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/video_previewer_surface"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:layout_editor_absoluteX="134dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
