@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/txtHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -47,9 +47,9 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView19"
-        app:layout_constraintStart_toStartOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintEnd_toEndOf="@+id/txtHeight"
+        app:layout_constraintStart_toStartOf="@+id/txtHeight"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
 
     <TextView
         android:id="@+id/textView20"
