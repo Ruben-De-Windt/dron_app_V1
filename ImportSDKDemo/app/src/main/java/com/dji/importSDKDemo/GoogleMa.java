@@ -79,8 +79,6 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
     private Button btnGetCachedLicense;
 
 
-
-
     private TextView loginStatusTv;
     private TextView flyZonesTv;
 
@@ -90,7 +88,9 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
     private MarkerOptions markerOptions = new MarkerOptions();
     private LatLng latLng;
 
+
     private double droneLocationLat = 50.805638, droneLocationLng = 3.282862;
+
 
 
 
