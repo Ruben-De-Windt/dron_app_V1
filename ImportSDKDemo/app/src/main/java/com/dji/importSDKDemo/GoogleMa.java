@@ -77,12 +77,6 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
     private Button btnRefreshLicense;
     private Button btnUploadToAircraft;
     private Button btnGetCachedLicense;
-    private GPSData.GPSLocation yow = new GPSData.GPSLocation(ge);
-
-    public GPSData.GPSLocation getYow() {
-
-        return yow;
-    }
 
     private TextView loginStatusTv;
     private TextView flyZonesTv;
@@ -92,7 +86,7 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
 
     private MarkerOptions markerOptions = new MarkerOptions();
     private LatLng latLng;
-    private double droneLocationLat = locatie.getLatitude(), droneLocationLng = 181;
+    private double droneLocationLat = droneLocationLng = 181, droneLocationLng = 181;
     private ArrayList<CustomUnlockZone> customUnlockZones;
     private ArrayList<Integer> flyZoneIdsToUnlock = new ArrayList<Integer>();
     private kluerenVlieg painter = new kluerenVlieg();
