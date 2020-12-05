@@ -1,23 +1,23 @@
 package com.dji.importSDKDemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+<<<<<<< HEAD
+import androidx.appcompat.app.AppCompatActivity;
+
+import dji.common.battery.BatteryState;
+=======
 import dji.common.flightcontroller.LocationCoordinate3D;
 import dji.common.flightcontroller.FlightControllerState;
 import dji.sdk.base.BaseComponent;
+>>>>>>> c5cf9ebe6f5bf915aab15791249a4ca1a6ea95e4
 import dji.sdk.base.BaseProduct;
 import dji.sdk.flightcontroller.FlightController;
 import dji.sdk.products.Aircraft;
-import dji.sdk.sdkmanager.DJISDKInitEvent;
-import dji.sdk.sdkmanager.DJISDKManager;
-import dji.common.battery.BatteryState;
 
 import dji.sdk.flightcontroller.LandingGear;
 
