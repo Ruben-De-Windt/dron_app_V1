@@ -16,10 +16,9 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
-
-
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -46,6 +45,7 @@ import dji.common.flightcontroller.flyzone.SubFlyZoneInformation;
 import dji.common.flightcontroller.flyzone.SubFlyZoneShape;
 import dji.common.flightcontroller.flyzone.UnlockedZoneGroup;
 import dji.common.model.LocationCoordinate2D;
+import dji.common.remotecontroller.GPSData;
 import dji.common.useraccount.UserAccountState;
 import dji.common.util.CommonCallbacks;
 import dji.log.DJILog;
@@ -78,6 +78,9 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
     private Button btnUploadToAircraft;
     private Button btnGetCachedLicense;
 
+
+
+
     private TextView loginStatusTv;
     private TextView flyZonesTv;
 
@@ -86,7 +89,11 @@ public class GoogleMa extends FragmentActivity implements View.OnClickListener, 
 
     private MarkerOptions markerOptions = new MarkerOptions();
     private LatLng latLng;
+
     private double droneLocationLat = 50.805638, droneLocationLng = 3.282862;
+
+
+
     private ArrayList<CustomUnlockZone> customUnlockZones;
     private ArrayList<Integer> flyZoneIdsToUnlock = new ArrayList<Integer>();
     private kluerenVlieg painter = new kluerenVlieg();

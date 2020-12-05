@@ -4,145 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
+
     android:background="#035F6C">
-=======
-    tools:ignore="ExtraText">
->>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
+
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="179dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
         android:text="75 °C"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBatteryTemp" />
 
     <TextView
         android:id="@+id/txtHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="182dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
         android:text="135,7°"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+
+        android:layout_marginEnd="64dp"
         android:text="@string/height"
-<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView12" />
-=======
-        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina1"
-        app:layout_constraintStart_toStartOf="@+id/txtBatteryVoltage"
-        app:layout_constraintTop_toTopOf="@+id/txtHeading" />
->>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBatteryVoltage" />
+
 
     <TextView
         android:id="@+id/txtBatteryProcent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
         android:text="75 %"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/txtBatteryCurrent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/txtHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="184dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
         android:text="31,1m"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/txtBatteryVoltage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="64dp"
         android:text="100 mV"
-<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-=======
-        app:layout_constraintStart_toStartOf="@+id/txtBatteryCurrent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
->>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="80dp"
+
+        android:layout_marginEnd="64dp"
         android:text="@string/battery"
-<<<<<<< HEAD
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintStart_toStartOf="@+id/textView22" />
-=======
-        app:layout_constraintBottom_toTopOf="@+id/txtBatteryCurrent"
-        app:layout_constraintStart_toStartOf="@+id/txtBatteryCurrent" />
->>>>>>> 1d3ed79654278024227cd0da3d27e925d753f44e
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
         android:text="@string/compas"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtBatteryCurrent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="246dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="245dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
         android:text="100 mA"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtBatteryTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="9dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="64dp"
         android:text="@string/temperature"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHeight" />
 
     <Button
         android:id="@+id/homeBtnPagina1"
@@ -156,80 +145,83 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="0dp"
+        android:layout_width="132dp"
         android:layout_height="67dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/btn_draw_end" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView22"
-        app:layout_constraintEnd_toStartOf="@+id/textView22"
+        android:layout_width="66dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="64dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
         app:srcCompat="@drawable/_00_" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="183dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="64dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtBatteryTemp"
         app:srcCompat="@drawable/ic_topbar_battery_overheat_warning" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="0dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="135dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="64dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
         app:srcCompat="@drawable/leftmenu_dlg_landing" />
 
     <Button
         android:id="@+id/btnHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
         android:onClick="GetHeading"
         android:text="Get Heading"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/btnBattery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+
         android:onClick="GetBatteryInfo"
         android:text="Get Battery Info"
-
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBatteryCurrent" />
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="304dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <Button
+        android:id="@+id/btnHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Get Height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <Button
+        android:id="@+id/btnTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Get Temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
