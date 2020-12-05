@@ -64,6 +64,14 @@ public class Pagina1 extends AppCompatActivity {
             }
         });
 
+        Button getTemperatureInfo = (Button) findViewById (R.id.btnTemperature);
+        getTemperatureInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GetTemperatureInfo();
+            }
+        });
+
     }
 
     private void GetHeading()
@@ -72,12 +80,54 @@ public class Pagina1 extends AppCompatActivity {
         infoHeading.setText("");
 
         Aircraft aircraft = (Aircraft) mProduct;
-        FlightController flightController = aircraft.getFlightController();
-        //showToast("Heading: "+ flightController.getCompass().getHeading());
-        String text = flightController.getCompass().getHeading()+"°";
-        //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
-        //toast.show();
-        infoHeading.setText(text);
+        if (mProduct == null || !mProduct.isConnected()) {
+            Toast toast = Toast.makeText(getApplicationContext(),mProduct+"<-- mProduct",Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else{
+            FlightController flightController = aircraft.getFlightController();
+            //showToast("Heading: "+ flightController.getCompass().getHeading());// float range[-180 -> 180] (True North is 0°/ Positive is East/ Negative is West)
+            String text = flightController.getCompass().getHeading()+"°";
+            String Cardinal = "";
+            int Degrees= (int) flightController.getCompass().getHeading();
+
+            if(1<=Degrees && Degrees<=89)
+            {
+                Cardinal= "NE";
+            }
+            if(-1>=Degrees && Degrees>=-90)
+            {
+                Cardinal= "NW";
+            }
+            if(91<=Degrees && Degrees<=179)
+            {
+                Cardinal= "SE";
+            }
+            if(-179<=Degrees && Degrees<=-91)
+            {
+                Cardinal= "SW";
+            }
+            if(Degrees==0)
+            {
+                Cardinal= "N";
+            }
+            if(Degrees==90)
+            {
+                Cardinal= "E";
+            }
+            if(Degrees==-90)
+            {
+                Cardinal= "W";
+            }
+            if(Degrees==180 ||Degrees==-180 )
+            {
+                Cardinal= "S";
+            }
+            Toast toast = Toast.makeText(getApplicationContext(),Cardinal,Toast.LENGTH_LONG);
+            toast.show();
+            infoHeading.setText(text);
+        }
+
 
 
     }
@@ -91,18 +141,25 @@ public class Pagina1 extends AppCompatActivity {
         infoCurrent.setText("");
         infoVoltage.setText("");
 
-        mProduct.getBattery().setStateCallback(new BatteryState.Callback() {
-            @Override
-            public void onUpdate(BatteryState djiBatteryState) {
-                String batteryInfoProcent = djiBatteryState.getChargeRemainingInPercent()+"%";
-                String batteryInfoCurrent =  djiBatteryState.getCurrent()+"mA";
-                String batteryInfoVoltage = djiBatteryState.getVoltage()+"mV";
+        if (mProduct == null || !mProduct.isConnected()) {
+            Toast toast = Toast.makeText(getApplicationContext(),"no Product or disconnected",Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else {
 
-                infoProcent.setText(batteryInfoProcent);
-                infoCurrent.setText(batteryInfoCurrent);
-                infoVoltage.setText(batteryInfoVoltage);
-            }
-        });
+            mProduct.getBattery().setStateCallback(new BatteryState.Callback() {
+                @Override
+                public void onUpdate(BatteryState djiBatteryState) {
+                    String batteryInfoProcent = djiBatteryState.getChargeRemainingInPercent() + "%";//int range [0 -> 100]
+                    String batteryInfoCurrent = djiBatteryState.getCurrent() + "mA";//int
+                    String batteryInfoVoltage = djiBatteryState.getVoltage() + "mV";//int
+
+                    infoProcent.setText(batteryInfoProcent);
+                    infoCurrent.setText(batteryInfoCurrent);
+                    infoVoltage.setText(batteryInfoVoltage);
+                }
+            });
+        }
     }
     private void GetHeight()
     {
@@ -110,16 +167,44 @@ public class Pagina1 extends AppCompatActivity {
         infoHeight.setText("");
 
         Aircraft aircraft = (Aircraft) mProduct;
-        FlightController flightController = aircraft.getFlightController();
-        FlightControllerState flightControllerState = flightController.getState();
-        LocationCoordinate3D locationCoordinate3D = flightControllerState.getAircraftLocation();
-        //showToast("Heading: "+ flightController.getCompass().getHeading());
-        String text = locationCoordinate3D.getAltitude()+"m.";
-        //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
-        //toast.show();
-        infoHeight.setText(text);
+
+        if (mProduct == null || !mProduct.isConnected()) {
+            Toast toast = Toast.makeText(getApplicationContext(),"no Product or disconnected",Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else {
+            FlightController flightController = aircraft.getFlightController();
+            FlightControllerState flightControllerState = flightController.getState();
+            LocationCoordinate3D locationCoordinate3D = flightControllerState.getAircraftLocation();// float (relative from take off location)
+            //showToast("Heading: "+ flightController.getCompass().getHeading());
+            String text = locationCoordinate3D.getAltitude() + "m.";
+            //Toast toast = Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG);
+            //toast.show();
+            infoHeight.setText(text);
+        }
 
 
+    }
+    private void GetTemperatureInfo()
+    {
+        TextView infoBatteryTemp = findViewById(R.id.txtBatteryTemp);
+        infoBatteryTemp.setText("");
+
+        if (mProduct == null || !mProduct.isConnected()) {
+            Toast toast = Toast.makeText(getApplicationContext(),"no Product or disconnected",Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else {
+
+            mProduct.getBattery().setStateCallback(new BatteryState.Callback() {
+                @Override
+                public void onUpdate(BatteryState djiBatteryState) {
+                    String batteryTempInfo = djiBatteryState.getTemperature() + "°C"; //float range [-128->127]
+
+                    infoBatteryTemp.setText(batteryTempInfo);
+                }
+            });
+        }
     }
 
 }
