@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onProductConnect(BaseProduct baseProduct) {
                             Log.d(TAG, String.format("onProductConnect newProduct:%s", baseProduct));
-                            showToast("Product Connected" + baseProduct.getModel() + compass.getHeading());
+                            showToast("Product Connected" + baseProduct.getModel());
                             notifyStatusChange();
                             mProduct = baseProduct; //Koppelin maken naar globale variable
 
