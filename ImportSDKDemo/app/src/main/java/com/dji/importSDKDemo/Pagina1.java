@@ -1,21 +1,17 @@
 package com.dji.importSDKDemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import dji.sdk.base.BaseComponent;
+import androidx.appcompat.app.AppCompatActivity;
+
+import dji.common.battery.BatteryState;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.flightcontroller.FlightController;
 import dji.sdk.products.Aircraft;
-import dji.sdk.sdkmanager.DJISDKInitEvent;
-import dji.sdk.sdkmanager.DJISDKManager;
-import dji.common.battery.BatteryState;
 
 public class Pagina1 extends AppCompatActivity {
     private static BaseProduct mProduct;
