@@ -6,103 +6,119 @@
     android:layout_height="match_parent"
     android:background="#035F6C">
 
-    <Button
-        android:id="@+id/homeBtnPagina2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/startscreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_shoot_photo_mode"
-        tools:layout_editor_absoluteX="150dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/navMap"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_margin="8dp"
 
-    <Button
-        android:id="@+id/navMap"
-        android:layout_width="106dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="156dp"
-        android:text="navcor"
+            android:text="navcor" />
 
-        app:layout_constraintBottom_toTopOf="@+id/timer"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="152dp" />
+        <TextureView
+            android:id="@+id/video_previewer_surface"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" />
 
-    <TextureView
-        android:id="@+id/video_previewer_surface"
-        android:layout_width="428dp"
-        android:layout_height="236dp"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_record"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="319dp">
 
-    <Button
-        android:id="@+id/btn_capture"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:text="Capture"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_record"
-        tools:layout_editor_absoluteX="61dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <ToggleButton
-        android:id="@+id/btn_record"
-        android:layout_width="106dp"
-        android:layout_height="69dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:checked="false"
-        android:text="Start Record"
-        android:textOff="Start Record"
-        android:textOn="Stop Record"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_record_video_mode"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="552dp" />
+                <Button
+                    android:id="@+id/btn_shoot_photo_mode"
+                    android:layout_width="157dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Shoot Photo Mode"
+                    android:textSize="12sp" />
+            </TableRow>
 
-    <Button
-        android:id="@+id/btn_shoot_photo_mode"
-        android:layout_width="157dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:text="Shoot Photo Mode"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/homeBtnPagina2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_record_video_mode"
-        tools:layout_editor_absoluteX="202dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_record_video_mode"
-        android:layout_width="105dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:text="Record Video Mode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_record"
-        tools:layout_editor_absoluteY="552dp" />
+                <Button
+                    android:id="@+id/btn_capture"
+                    android:layout_width="133dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Capture"
+                    android:textSize="12sp" />
+            </TableRow>
 
-    <TextView
-        android:id="@+id/timer"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/video_previewer_surface"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/video_previewer_surface"
-        tools:layout_editor_absoluteX="134dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_record_video_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Record Video Mode" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/video_previewer_surface"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#ffffff" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/btn_record"
+                    android:layout_width="106dp"
+                    android:layout_height="69dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Start Record"
+                    android:textOff="Start Record"
+                    android:textOn="Stop Record"
+                    android:textSize="12dp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/homeBtnPagina2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/startscreen" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
